@@ -19,9 +19,14 @@ public class UsuarioController {
     private UsuarioService service;
 
     // localhost:8001
-    @GetMapping
+  /* @GetMapping
     public List<Usuario> listar(){
         return service.listar();
+    }*/ // O tambien con Map:
+
+    @GetMapping
+    public Map<String , List<Usuario>> listar(){
+        return Collections.singletonMap("users", service.listar());
     }
 
     //localhost:8001/3

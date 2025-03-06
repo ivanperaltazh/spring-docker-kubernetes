@@ -15,6 +15,7 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
+.idea/git_toolbox_blame.xml
 *.iws
 *.iml
 *.ipr
