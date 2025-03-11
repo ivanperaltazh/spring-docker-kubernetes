@@ -10,7 +10,8 @@ import java.util.List;
 // Las anotaciones son iguales a las que se usan en el controllador GetMapping, etc.
 // Y la ruta del microservicio podemos ver estos datos en el pom.xml
 // Y esto ya se puede Inyectar ya es un bean de Spring.
-@FeignClient(name="msvc-usuarios", url="localhost:8001")
+// @FeignClient(name="msvc-usuarios", url="localhost:8001")
+@FeignClient(name="msvc-usuarios", url="msvc-usuarios:8001")
 public interface UsuarioClientRest {
 
     /* los Metodos deben tener una firma similar es decir:

@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "67215cc8-8070-4fce-987d-6d259834893e",
+		"name": "CursoSpringDockerKubernetes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4624400"
+	},
+	"item": [
+		{
+			"name": "usuarios-get",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001",
+					"host": [
+						"localhost"
+					],
+					"port": "8001"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios-delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios-list-by-ids",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/usuarios-por-curso?ids=1,2,3,5",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"usuarios-por-curso"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "1,2,3,5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cursos-get",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8002",
+					"host": [
+						"localhost"
+					],
+					"port": "8002"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "curso-detalle-con-usuarios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8002/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "curso-crear",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\":\"Spring Cloud\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002",
+					"host": [
+						"localhost"
+					],
+					"port": "8002"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "curso-asignar_usuario_a_curso",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n        {\r\n        \"id\": 5,\r\n        \"nombre\": \"Maria Prueba\",\r\n        \"email\": \"Maria@gmail.com\",\r\n        \"password\": \"123\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/asignar-usuario/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"asignar-usuario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "curso-crea-y-asigna-usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"nombre\": \"Rosa Doe\",\r\n        \"email\": \"rosa@gmail.com\",\r\n        \"password\": \"12345\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/crear-usuario/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"crear-usuario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "curso-borra-usuario-de-curso",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 5,\r\n        \"nombre\": \"Maria Prueba\",\r\n        \"email\": \"Maria@gmail.com\",\r\n        \"password\": \"123\"\r\n    },",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/eliminar-usuario/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"eliminar-usuario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
